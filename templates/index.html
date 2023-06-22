@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <h3>Your Stock Portfolio</h3> <br>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Company Name</th>
+          <th scope="col">Shares</th>
+          <th scope="col">Current Price (USD)</th>
+          <th scope="col">Total Value (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for symbol, values in owns.items() %}
+        <tr>
+          <td>{{ symbol }}</td>
+          <td>{{ values[0] }}</td>
+          <td>{{ values[1] }}</td>
+          <td>{{ values[2] }}</td>
+          <td>{{ values[3] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td colspan="4"><strong>Remaining Cash</strong></td>
+          <td>{{ cash }}</td>
+        </tr>
+        <tr>
+          <td colspan="4"><strong>TOTAL BALANCE</strong></td>
+          <td>{{ total }}</td>
+        </tr>
+      </tbody>
+    </table>
+{% endblock %}
