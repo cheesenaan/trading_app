@@ -1,4 +1,4 @@
-cs50
-Flask
-Flask-Session
-requests
+pip install cs50
+pip install Flask
+pip install Flask-Session
+pip install requests
