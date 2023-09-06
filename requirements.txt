@@ -2,3 +2,5 @@ pip install cs50
 pip install Flask
 pip install Flask-Session
 pip install requests
+pip install jinja2
+pip install flask_app
